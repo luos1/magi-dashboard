@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import NodeCard from './components/NodeCard'
 import ActivityLog from './components/ActivityLog'
 import StatsPanel from './components/StatsPanel'
+import KeywordResearch from './components/KeywordResearch'
 
 // 데모 데이터 (나중에 실제 API 연결)
 const initialNodes = [
@@ -141,6 +142,11 @@ function App() {
           {/* 활동 로그 */}
           <ActivityLog logs={logs} />
         </div>
+      </div>
+
+      {/* 키워드 리서치 */}
+      <div className="mt-6">
+        <KeywordResearch />
       </div>
 
       {/* 푸터 */}
