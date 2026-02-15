@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Press+Start+2P&display=swap');
+
+:root {
+  --magi-dark: #0a0a0f;
+  --magi-panel: #12121a;
+  --magi-border: #2a2a3a;
+  --magi-green: #00ff88;
+  --magi-red: #ff4444;
+  --magi-yellow: #ffaa00;
+  --magi-blue: #00aaff;
+}
+
+body {
+  background: var(--magi-dark);
+  color: #e0e0e0;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* 게임 스타일 프로그레스 바 */
+.progress-bar {
+  background: #1a1a2a;
+  border: 2px solid var(--magi-border);
+  height: 20px;
+  position: relative;
+}
+
+.progress-fill {
+  height: 100%;
+  transition: width 0.5s ease;
+}
+
+.progress-fill.hp { background: linear-gradient(90deg, #00aa44, var(--magi-green)); }
+.progress-fill.mp { background: linear-gradient(90deg, #0066aa, var(--magi-blue)); }
+.progress-fill.warning { background: linear-gradient(90deg, #aa6600, var(--magi-yellow)); }
+.progress-fill.danger { background: linear-gradient(90deg, #aa0000, var(--magi-red)); }
+
+/* 깜빡이는 효과 */
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0.3; }
+}
+
+.status-online { color: var(--magi-green); }
+.status-warning { color: var(--magi-yellow); animation: blink 1s infinite; }
+.status-offline { color: var(--magi-red); }
+
+/* 노드 카드 */
+.node-card {
+  background: var(--magi-panel);
+  border: 2px solid var(--magi-border);
+  transition: all 0.3s ease;
+}
+
+.node-card:hover {
+  border-color: var(--magi-blue);
+  box-shadow: 0 0 20px rgba(0, 170, 255, 0.2);
+}
+
+.node-card.online { border-left: 4px solid var(--magi-green); }
+.node-card.warning { border-left: 4px solid var(--magi-yellow); }
+.node-card.offline { border-left: 4px solid var(--magi-red); }
+
+/* 로그 스타일 */
+.log-entry {
+  border-left: 3px solid var(--magi-border);
+  padding-left: 12px;
+  margin: 8px 0;
+}
+
+.log-entry.success { border-color: var(--magi-green); }
+.log-entry.warning { border-color: var(--magi-yellow); }
+.log-entry.error { border-color: var(--magi-red); }
+.log-entry.info { border-color: var(--magi-blue); }
