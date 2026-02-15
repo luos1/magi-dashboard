@@ -75,18 +75,19 @@ const initialLogs = [
   { time: '23:55', type: 'success', message: '🏃 페이스메이커 앱 개발 시작 - watchOS 코드 생성 완료' },
   { time: '23:49', type: 'success', message: '📱 앱 팩토리 기획 완료 - 러닝 심박수 알림 앱' },
   { time: '23:41', type: 'info', message: '🏭 MAGI 파이프라인 실행 - 모임관리 앱 → 폐기 결정' },
-  { time: '23:27', type: 'success', message: '📝 Obsidian 기록 - APP-모여라.md 생성' },
+  { time: '23:27', type: 'success', message: '📝 Obsidian 기록 완료' },
   { time: '23:18', type: 'success', message: '🤖 멜키오르 기획서 생성 완료 (qwen2.5:7b)' },
   { time: '23:10', type: 'warning', message: '⚠️ 발타사르 연결 오류 - 타임아웃 180초로 조정' },
-  { time: '23:05', type: 'success', message: '📚 Teamplay 프로젝트 Obsidian 기록 완료' },
-  { time: '22:30', type: 'info', message: '🎬 탐정 수첩 모션그래픽 테스트 영상 생성' },
-  { time: '18:25', type: 'success', message: '✅ 모션그래픽 파이프라인 완성 - MoviePy 연동' },
+  { time: '23:05', type: 'success', message: '📚 Teamplay 프로젝트 기록 완료' },
+  { time: '22:30', type: 'info', message: '🎬 탐정 수첩 모션그래픽 테스트' },
+  { time: '18:25', type: 'success', message: '✅ 모션그래픽 파이프라인 완성' },
+  { time: '00:00', type: 'info', message: '⚠️ 데모 모드 - 실제 API 연동 필요' },
 ]
 
 function App() {
   const [nodes, setNodes] = useState(initialNodes)
   const [logs, setLogs] = useState(initialLogs)
-  const [dailyRevenue] = useState(32450)
+  const [dailyRevenue] = useState(0)  // 실제 연동 필요
   const [totalTasks] = useState({ queued: 12, completed: 847, failed: 3 })
 
   // 시뮬레이션: 랜덤 로그 추가
@@ -97,9 +98,9 @@ function App() {
         { type: 'info', message: '🔧 발타사르 Ollama 처리 중...' },
         { type: 'success', message: '📝 블로그 게시물 발행 완료' },
         { type: 'info', message: '🏭 앱 팩토리 파이프라인 대기 중' },
-        { type: 'success', message: '💰 쿠팡 파트너스 +₩' + Math.floor(Math.random() * 5000) + ' 수익' },
-        { type: 'info', message: '🎬 마루 유튜브 영상 인코딩 중' },
-        { type: 'success', message: '📊 AdSense 수익 업데이트' },
+        { type: 'info', message: '🎬 영상 인코딩 중...' },
+        { type: 'success', message: '📱 앱 빌드 완료' },
+        { type: 'info', message: '🔍 시장 조사 진행 중...' },
       ]
       const event = events[Math.floor(Math.random() * events.length)]
       const now = new Date()
