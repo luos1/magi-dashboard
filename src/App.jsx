@@ -3,6 +3,14 @@ import NodeCard from './components/NodeCard'
 import ActivityLog from './components/ActivityLog'
 import StatsPanel from './components/StatsPanel'
 import KeywordResearch from './components/KeywordResearch'
+import ProjectsPanel from './components/ProjectsPanel'
+
+// 앱 팩토리 프로젝트 데이터
+const appProjects = [
+  { name: 'SpinEat', emoji: '🍽️', platform: 'iOS', status: '심사중' },
+  { name: 'Teamplay', emoji: '📚', platform: 'iOS + Android', status: '개발중' },
+  { name: '페이스메이커', emoji: '🏃', platform: 'watchOS', status: '개발중' },
+]
 
 // 데모 데이터 (나중에 실제 API 연결)
 const initialNodes = [
@@ -142,6 +150,9 @@ function App() {
 
         {/* 사이드바 */}
         <div className="space-y-6">
+          {/* 앱 팩토리 프로젝트 */}
+          <ProjectsPanel projects={appProjects} />
+          
           {/* 통계 */}
           <StatsPanel stats={totalTasks} />
           
