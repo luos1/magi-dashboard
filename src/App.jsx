@@ -9,7 +9,10 @@ import ProjectsPanel from './components/ProjectsPanel'
 const appProjects = [
   { name: 'SpinEat', emoji: '🍽️', platform: 'iOS', status: '심사중' },
   { name: 'Teamplay', emoji: '📚', platform: 'iOS + Android', status: '개발중' },
-  { name: '페이스메이커', emoji: '🏃', platform: 'watchOS', status: '개발중' },
+  { name: '페이스메이커', emoji: '🏃', platform: 'watchOS + WearOS', status: '개발중' },
+  { name: '택배왔나', emoji: '📦', platform: 'iOS + Android', status: '개발중' },
+  { name: '해뜨나', emoji: '🌅', platform: 'iOS + Android', status: '개발중' },
+  { name: '배터리친구', emoji: '🔋', platform: 'iOS + Android', status: '개발중' },
 ]
 
 // 데모 데이터 (나중에 실제 API 연결)
