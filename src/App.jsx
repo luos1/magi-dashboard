@@ -13,8 +13,8 @@ const initialNodes = [
     role: '코어',
     status: 'online',
     level: 5,
-    hp: 100,
-    mp: 85,
+    hp: 84,  // 컨텍스트 127k/150k = 84%
+    mp: 16,  // 여유 공간
     stats: { atk: 1247, def: 99.8, spd: 0.3 },
     currentTask: '작업 분배 중...',
     skills: ['OpenClaw', 'SSH Control', 'Memory'],
