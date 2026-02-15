@@ -72,13 +72,15 @@ const initialNodes = [
 ]
 
 const initialLogs = [
-  { time: '15:21', type: 'success', message: '발타사르 joined the party!' },
-  { time: '15:20', type: 'info', message: '멜키오르 used [Ollama] → qwen2.5:7b loaded' },
-  { time: '15:18', type: 'success', message: '📝 제리 recorded to Obsidian' },
-  { time: '15:15', type: 'warning', message: '카스파 is offline...' },
-  { time: '15:10', type: 'success', message: '💰 +₩12,340 from AdSense' },
-  { time: '15:05', type: 'success', message: '✅ Blog post #847 published' },
-  { time: '15:00', type: 'info', message: '🎬 YouTube video processing started' },
+  { time: '23:55', type: 'success', message: '🏃 페이스메이커 앱 개발 시작 - watchOS 코드 생성 완료' },
+  { time: '23:49', type: 'success', message: '📱 앱 팩토리 기획 완료 - 러닝 심박수 알림 앱' },
+  { time: '23:41', type: 'info', message: '🏭 MAGI 파이프라인 실행 - 모임관리 앱 → 폐기 결정' },
+  { time: '23:27', type: 'success', message: '📝 Obsidian 기록 - APP-모여라.md 생성' },
+  { time: '23:18', type: 'success', message: '🤖 멜키오르 기획서 생성 완료 (qwen2.5:7b)' },
+  { time: '23:10', type: 'warning', message: '⚠️ 발타사르 연결 오류 - 타임아웃 180초로 조정' },
+  { time: '23:05', type: 'success', message: '📚 Teamplay 프로젝트 Obsidian 기록 완료' },
+  { time: '22:30', type: 'info', message: '🎬 탐정 수첩 모션그래픽 테스트 영상 생성' },
+  { time: '18:25', type: 'success', message: '✅ 모션그래픽 파이프라인 완성 - MoviePy 연동' },
 ]
 
 function App() {
@@ -91,16 +93,20 @@ function App() {
   useEffect(() => {
     const interval = setInterval(() => {
       const events = [
-        { type: 'success', message: '✅ Task completed' },
-        { type: 'info', message: '🔧 Processing...' },
-        { type: 'success', message: '💰 +₩' + Math.floor(Math.random() * 1000) + ' earned' },
+        { type: 'success', message: '✅ 멜키오르 이미지 생성 완료' },
+        { type: 'info', message: '🔧 발타사르 Ollama 처리 중...' },
+        { type: 'success', message: '📝 블로그 게시물 발행 완료' },
+        { type: 'info', message: '🏭 앱 팩토리 파이프라인 대기 중' },
+        { type: 'success', message: '💰 쿠팡 파트너스 +₩' + Math.floor(Math.random() * 5000) + ' 수익' },
+        { type: 'info', message: '🎬 마루 유튜브 영상 인코딩 중' },
+        { type: 'success', message: '📊 AdSense 수익 업데이트' },
       ]
       const event = events[Math.floor(Math.random() * events.length)]
       const now = new Date()
       const time = `${now.getHours().toString().padStart(2, '0')}:${now.getMinutes().toString().padStart(2, '0')}`
       
       setLogs(prev => [{ time, ...event }, ...prev.slice(0, 19)])
-    }, 5000)
+    }, 8000)
 
     return () => clearInterval(interval)
   }, [])
@@ -139,7 +145,7 @@ function App() {
         {/* 노드 카드들 */}
         <div className="lg:col-span-2">
           <h2 className="text-lg font-bold mb-4 flex items-center gap-2">
-            <span>⚔️</span> Active Units
+            <span>⚔️</span> MAGI 노드 현황
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {nodes.map(node => (

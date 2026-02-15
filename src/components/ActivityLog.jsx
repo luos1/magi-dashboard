@@ -2,7 +2,7 @@ function ActivityLog({ logs }) {
   return (
     <div className="bg-[var(--magi-panel)] border border-[var(--magi-border)] rounded-lg p-4">
       <h3 className="font-bold mb-3 flex items-center gap-2">
-        <span>📜</span> Activity Log
+        <span>📜</span> 실시간 활동 로그
       </h3>
       <div className="space-y-1 max-h-80 overflow-y-auto">
         {logs.map((log, i) => (
