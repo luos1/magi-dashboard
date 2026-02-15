@@ -111,6 +111,12 @@ function App() {
           <p className="text-gray-500 text-sm mt-1">MAGI System Control Dashboard</p>
         </div>
         <div className="flex items-center gap-4">
+          <button
+            onClick={() => window.location.reload()}
+            className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg flex items-center gap-2 transition-colors"
+          >
+            🔄 Reload
+          </button>
           <div className="bg-[var(--magi-panel)] border border-[var(--magi-border)] px-4 py-2 rounded">
             <span className="text-gray-400 text-sm">Daily Revenue</span>
             <div className="text-xl font-bold text-[var(--magi-green)]">
